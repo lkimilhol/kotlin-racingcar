@@ -1,3 +1,5 @@
+import exception.EmptyNameException
+import exception.TooLongNameException
 import org.junit.jupiter.api.Assertions.assertThrows
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
@@ -9,7 +11,7 @@ internal class NameTest {
         // given
         // when
         // then
-        assertThrows(IllegalArgumentException::class.java) {
+        assertThrows(EmptyNameException::class.java) {
             Name.create("")
         }
     }
@@ -19,7 +21,7 @@ internal class NameTest {
         // given
         // when
         // then
-        assertThrows(IllegalArgumentException::class.java) {
+        assertThrows(TooLongNameException::class.java) {
             Name.create("123456")
         }
     }
