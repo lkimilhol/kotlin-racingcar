@@ -1,3 +1,4 @@
+import exception.NegativeNumberException
 import org.junit.jupiter.api.Assertions.assertThrows
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
@@ -9,7 +10,7 @@ internal class PositiveTest {
         // given
         // when
         // then
-        assertThrows(RuntimeException::class.java) {
+        assertThrows(NegativeNumberException::class.java) {
             Positive.create(-5)
         }
     }

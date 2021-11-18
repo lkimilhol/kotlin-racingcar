@@ -1,3 +1,5 @@
+import exception.NegativeNumberException
+
 data class Positive private constructor(val number: Int) {
     companion object {
         fun create(number: Int): Positive {
@@ -7,7 +9,7 @@ data class Positive private constructor(val number: Int) {
 
         private fun validate(number: Int) {
             if (number < 0) {
-                throw RuntimeException("")
+                throw NegativeNumberException()
             }
         }
     }
