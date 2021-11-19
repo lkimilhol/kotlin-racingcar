@@ -1,3 +1,5 @@
+package model
+
 import exception.EmptyNameException
 import exception.TooLongNameException
 

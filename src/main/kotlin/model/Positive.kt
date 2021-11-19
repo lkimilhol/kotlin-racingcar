@@ -1,3 +1,5 @@
+package model
+
 import exception.NegativeNumberException
 
 data class Positive private constructor(val number: Int) {
