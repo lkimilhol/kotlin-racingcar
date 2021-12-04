@@ -1,7 +1,7 @@
 package model
 
-import io.kotlintest.matchers.numerics.shouldBeGreaterThan
-import io.kotlintest.matchers.numerics.shouldBeLessThan
+import io.kotlintest.matchers.numerics.shouldBeGreaterThanOrEqual
+import io.kotlintest.matchers.numerics.shouldBeLessThanOrEqual
 import org.junit.jupiter.api.Test
 
 internal class RandomGeneratorTest {
@@ -11,7 +11,7 @@ internal class RandomGeneratorTest {
         val expect = RandomGenerator.create()
         // when
         // then
-        expect shouldBeGreaterThan 0
-        expect shouldBeLessThan 15
+        expect shouldBeGreaterThanOrEqual 0
+        expect shouldBeLessThanOrEqual 9
     }
 }
