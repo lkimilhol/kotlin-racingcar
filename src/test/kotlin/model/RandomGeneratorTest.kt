@@ -8,10 +8,10 @@ internal class RandomGeneratorTest {
     @Test
     fun `랜덤 숫자 생성`() {
         // given
-        val expect = RandomGenerator.create()
+        val expect = RandomGenerator.exec()
         // when
         // then
-        expect shouldBeGreaterThanOrEqual 0
-        expect shouldBeLessThanOrEqual 9
+        expect shouldBeGreaterThanOrEqual Car.MIN
+        expect shouldBeLessThanOrEqual Car.MAX
     }
 }

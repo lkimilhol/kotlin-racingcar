@@ -1,11 +1,11 @@
 package model
 
+import model.Car.Companion.MIN
+import model.Car.Companion.MAX
+
 class RandomGenerator {
     companion object {
-        private const val MIN = 0
-        private const val MAX = 9
-
-        fun create(): Int {
+        fun exec(): Int {
             val range = (MIN .. MAX)
             return range.random()
         }
