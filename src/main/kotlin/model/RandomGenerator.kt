@@ -5,9 +5,9 @@ import model.Car.Companion.MAX
 
 class RandomGenerator {
     companion object {
-        fun exec(): Int {
+        fun exec(): Positive {
             val range = (MIN .. MAX)
-            return range.random()
+            return Positive.create(range.random())
         }
     }
 }

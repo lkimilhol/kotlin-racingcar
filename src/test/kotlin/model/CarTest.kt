@@ -7,12 +7,11 @@ import org.junit.jupiter.api.Test
 @DisplayName("자동차 테스트")
 internal class CarTest {
     @Test
-    fun `자동차 생성`() {
+    fun `자동차 생성 범위 테스트`() {
         // given
-        val car = Car(Positive.create(5), Name.create("car"))
         // when
         // then
-        car.position shouldBe Positive.create(5)
-        car.name shouldBe Name.create("car")
+        Car.MIN shouldBe 0
+        Car.MAX shouldBe 9
     }
 }
