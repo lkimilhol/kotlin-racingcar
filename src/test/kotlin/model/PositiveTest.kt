@@ -26,4 +26,15 @@ internal class PositiveTest {
         // then
         expect shouldBe Positive.create(5)
     }
+
+    @Test
+    fun `큰 값인지 비교`() {
+        // given
+        val positive = Positive.create(5)
+        val target = Positive.create(4)
+        // when
+        val actual = positive.isGraterThan(target)
+        // then
+        actual shouldBe true
+    }
 }

@@ -5,7 +5,7 @@ import exception.TooLongNameException
 
 data class Name private constructor(val name: String){
     companion object {
-        private const val NAME_LENGTH = 5
+        private const val MAX_LENGTH = 5
 
         fun create(name: String): Name {
             validate(name)
@@ -17,7 +17,7 @@ data class Name private constructor(val name: String){
                 throw EmptyNameException()
             }
 
-            if (name.length > NAME_LENGTH) {
+            if (name.length > MAX_LENGTH) {
                 throw TooLongNameException()
             }
         }

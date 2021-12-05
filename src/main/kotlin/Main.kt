@@ -1,6 +1,13 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+import model.Game
+import model.UserInterface
 
-    // Try adding program arguments at Run/Debug configuration
-    println("Program arguments: ${args.joinToString()}")
+fun main(args: Array<String>) {
+    UserInterface.printlnCarName()
+    val carNames = UserInterface.input()
+    UserInterface.printlnTryCount()
+    val tryCount = UserInterface.input().toInt()
+
+    val game = Game(carNames, tryCount)
+    game.play()
+    UserInterface.printlnWinner(game)
 }
