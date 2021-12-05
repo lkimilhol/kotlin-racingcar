@@ -12,8 +12,21 @@ class UserInterface {
 
         fun input(): String = readLine()!!
 
-        fun printlnWinner(winners: Winners) {
-            println("우승자는: $winners")
+        fun printlnWinner(game: Game) {
+            game.cars.cars.stream().forEach {
+                printlnMove(it)
+            }
+            println()
+            println("우승자는")
+            game.winners.cars.stream().forEach { println(it.name.name) }
+        }
+
+        private fun printlnMove(car: Car) {
+            print(car.name.name + ": ")
+            repeat(car.position.number()) {
+                print("-")
+            }
+            println()
         }
     }
 }

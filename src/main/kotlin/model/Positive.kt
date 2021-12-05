@@ -11,6 +11,14 @@ data class Positive private constructor(private val number: Int) {
         return Positive(number + 1)
     }
 
+    fun isMovable(randNum: Positive): Boolean {
+        return Game.MOVABLE_NUMBER <= randNum.number
+    }
+
+    fun number(): Int {
+        return number
+    }
+
     companion object {
         fun create(number: Int): Positive {
             validate(number)

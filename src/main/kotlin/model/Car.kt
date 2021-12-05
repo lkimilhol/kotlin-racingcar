@@ -1,8 +1,8 @@
 package model
 
-data class Car(private var position: Positive, private val name: Name) {
-    fun move() {
-        if (isMovable(RandomGenerator.exec())) {
+data class Car(var position: Positive, val name: Name) {
+    fun move(randNum: Positive) {
+        if (position.isMovable(randNum)) {
             position = position.go()
         }
     }
@@ -13,10 +13,6 @@ data class Car(private var position: Positive, private val name: Name) {
 
     fun isDraw(target: Car): Boolean {
         return position == target.position
-    }
-
-    private fun isMovable(randNum: Positive): Boolean {
-        return position.isGraterThan(randNum)
     }
 
     companion object {

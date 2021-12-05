@@ -8,6 +8,6 @@ fun main(args: Array<String>) {
     val tryCount = UserInterface.input().toInt()
 
     val game = Game(carNames, tryCount)
-    val winners = game.play()
-    UserInterface.printlnWinner(winners)
+    game.play()
+    UserInterface.printlnWinner(game)
 }

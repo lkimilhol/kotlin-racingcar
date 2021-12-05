@@ -3,7 +3,7 @@ package model
 import exception.EmptyNameException
 import exception.TooLongNameException
 
-data class Name private constructor(private val name: String){
+data class Name private constructor(val name: String){
     companion object {
         private const val MAX_LENGTH = 5
 

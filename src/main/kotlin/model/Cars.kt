@@ -1,10 +1,9 @@
 package model
 
-data class Cars(private val cars: List<Car>) {
+data class Cars(val cars: List<Car>) {
     fun move(tryCount: Int) {
         repeat(tryCount) {
-            cars.stream()
-                .map { it.move() }
+            cars.stream().forEach { it.move(RandomGenerator.exec()) }
         }
     }
 

@@ -1,3 +1,3 @@
 package model
 
-data class Winners(private val cars: List<Car>)
+data class Winners(val cars: List<Car>)
